@@ -29,20 +29,13 @@ let QuestionMarks = str => {
 };
 
 let isNumber = c => {
-  if( (c * 0) == 0){
-    return true;
-  } else {
-    return false;
-  }
+  return(c*0 == 0);
 };
+
 let findValue = (n1, n2) =>{
-  if((n1 + n2) === 10)
-    {
-      return true;
-    } else {
-      return false;
-    }
-}
+  return((n1+n2) === 10)
+};
+
 let threeQuestionsMarks = substr =>{
   var counter = 0;
   for(c in substr)
@@ -52,13 +45,9 @@ let threeQuestionsMarks = substr =>{
           counter++;
         } 
     }
-  if(counter === 3)
-    {
-      return true;
-    } else{
-      return false;
-    }
-}
+    return(counter === 3);
+};
+
 console.time('one');
 console.log(QuestionMarks('bcc?7??ccc?3tt1??????5'));
 console.timeEnd('one');
